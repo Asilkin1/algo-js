@@ -17,6 +17,7 @@ Algorithms and data structures standard library for JavaScript
 |    Linked List                           |        ☑️      |
 |    Binary Search Tree                    |        ☑️       |
 |    AVL Tree                              |                |
+|    Augmented BST                         |        ☑️      |
 |    Red-Black Tree                        |                |
 |    Weak AVL Tree                         |                |
 |    Splay Tree                            |                |
