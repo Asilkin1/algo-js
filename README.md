@@ -15,7 +15,7 @@ Algorithms and data structures standard library for JavaScript
 |    Hash Table                            |                |
 |    Union-Find                            |                |           
 |    Linked List                           |        ☑️      |
-|    Binary Search Tree                    |                |
+|    Binary Search Tree                    |        ☑️       |
 |    AVL Tree                              |                |
 |    Red-Black Tree                        |                |
 |    Weak AVL Tree                         |                |
