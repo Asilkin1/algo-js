@@ -3,7 +3,7 @@
     Stack (LIFO)
     Should be O(1) time for push and pop
 */
-class Stack<T>{
+export class Stack<T>{
     data:T[] | null
 
     constructor(...data:T[]){
@@ -28,5 +28,3 @@ class Stack<T>{
         return this.data?.length;
     }
 }
-
-module.exports = Stack;

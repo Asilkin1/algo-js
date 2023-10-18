@@ -6,7 +6,7 @@
  * @size = limit queue size(find an optimal size)
  * @data = data to be inserted in the queue or empty 
 */
-class Queue<T>{
+export class Queue<T>{
     size: T;
     data: T[] | null
 
@@ -37,5 +37,3 @@ class Queue<T>{
         return this.size;
     }
 }
-
-module.exports = Queue;

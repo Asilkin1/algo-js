@@ -1,7 +1,7 @@
 'use strict';
 
 // Node in a doubly linked list
-class Node<T>{
+export class Node<T>{
     data: T;
     prev: Node<T> | null;
     next: Node<T> | null;
@@ -22,7 +22,7 @@ class Node<T>{
  * insertAfter(Node, Data)            O(1)
  * remove(p)                          O(1)     
 */
-class LinkedList<T>{
+export class LinkedList<T>{
     head: Node<T> | null;
 
     constructor(head: Node<T> | null) {
@@ -124,8 +124,3 @@ class LinkedList<T>{
         return temp;
     }
 }
-
-module.exports = {
-    LinkedList,
-    Node
-};

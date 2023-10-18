@@ -1,5 +1,5 @@
 'use strict'
-const {Node, LinkedList} = require('../src/linkedlist');
+import  {Node, LinkedList} from '../src/linkedlist'
 
 test('create empty linked list', () => {
     const llist = new LinkedList();

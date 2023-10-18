@@ -1,5 +1,5 @@
 // stack data structure
-const Stack = require('../src/stack');
+import {Stack} from '../src/stack'
 
 const stack = new Stack();
 
