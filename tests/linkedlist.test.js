@@ -1,25 +1,28 @@
 'use strict'
-import  {Node, LinkedList} from '../src/linkedlist'
+const {Node, LinkedList} = require('../build/linkedlist');
+
+let llist;
+
+beforeAll(() => {
+    let node1 = new Node(20);
+    llist = new LinkedList(node1);
+});
 
 test('create empty linked list', () => {
-    const llist = new LinkedList();
     expect(llist.size()).toBe(0);
 });
 
 test('size of linked list', () => {
     let node1 = new Node(25);
-    const llist = new LinkedList(node1);
-    expect(llist.size()).toBe(1);
+    llist.insertAfter(node1,20);
+    expect(llist.size()).toBe(2);
 });
 
 test('clear linked list', () => {
     let node1 = new Node(25);
-    const llist = new LinkedList(node1);
+    llist.insertAfter(node1,34);
     llist.clear();
     expect(llist.size()).toBe(0);
-
-    // let a = [1,2,3];
-    // a.lastIndexOf(a[-1])
 });
 
 test('create linked list with 2 nodes linked together', () => {

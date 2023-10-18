@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "coverage": "jest --coverage",
-    "file": "jest -t linkedlist.test.js"
+    "check": "npm run build && npm run test",
+    "coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",

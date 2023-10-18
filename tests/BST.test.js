@@ -1,5 +1,5 @@
 'use strict'
-import {BSTTreeNode, BST} from '../src/BST'
+const {BSTTreeNode, BST} = require('../build/BST')
 
 let btree;
 

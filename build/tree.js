@@ -1,5 +1,4 @@
-"use strict";
-// Generic Tree data structure
+// // Generic Tree data structure
 // class TreeNode<T>{
 //     data: T;
 //     left: TreeNode<T> | null;

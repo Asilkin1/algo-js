@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Stack = void 0;
 /*
     Stack (LIFO)
     Should be O(1) time for push and pop
@@ -25,4 +27,4 @@ class Stack {
         return (_a = this.data) === null || _a === void 0 ? void 0 : _a.length;
     }
 }
-module.exports = Stack;
+exports.Stack = Stack;

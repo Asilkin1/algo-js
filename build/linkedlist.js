@@ -1,4 +1,6 @@
 'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinkedList = exports.Node = void 0;
 // Node in a doubly linked list
 class Node {
     constructor(data) {
@@ -7,6 +9,7 @@ class Node {
         this.prev = null;
     }
 }
+exports.Node = Node;
 /**
  * Doubly linked list methods  |   performance
  * first()                            O(1)
@@ -108,7 +111,4 @@ class LinkedList {
         return temp;
     }
 }
-module.exports = {
-    LinkedList,
-    Node
-};
+exports.LinkedList = LinkedList;

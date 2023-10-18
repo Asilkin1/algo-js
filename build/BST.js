@@ -1,17 +1,20 @@
 "use strict";
-class TreeNode {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BST = exports.BSTTreeNode = void 0;
+class BSTTreeNode {
     constructor(data) {
         this.data = data;
         this.left = null;
         this.right = null;
     }
 }
+exports.BSTTreeNode = BSTTreeNode;
 class BST {
     constructor() {
         this.root = null;
     }
     insert(data) {
-        const node = new TreeNode(data);
+        const node = new BSTTreeNode(data);
         if (!this.root) {
             this.root = node;
             return this;
@@ -57,11 +60,39 @@ class BST {
         }
         return false;
     }
+    // @data - data to be removed
+    remove(data) {
+        const removeNode = (node, data) => {
+            if (!removeNode)
+                return null;
+            // search left
+            if (data < node.data) {
+                node.left = removeNode(node.left, data);
+            }
+            // search right
+            else if (data > node.data) {
+                node.right = removeNode(node.right, data);
+            }
+            else {
+                if (!node.left) {
+                    return node.right;
+                }
+                else if (!node.right) {
+                    return node.left;
+                }
+                node.data = this.findMinValue(node.right);
+                node.right = removeNode(node.right, node.data);
+            }
+            return node;
+        };
+        this.root = removeNode(this.root, data);
+        return this;
+    } // end remove
+    findMinValue(node) {
+        while (node.left) {
+            node = node.left;
+        }
+        return node.data;
+    }
 }
-const bst = new BST();
-bst.insert(10);
-bst.insert(1);
-bst.insert(20);
-bst.insert(16);
-let find = bst.find(10);
-console.log('Found: ', find);
+exports.BST = BST;

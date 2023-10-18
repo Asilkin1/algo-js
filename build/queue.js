@@ -1,4 +1,6 @@
 'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Queue = void 0;
 /**
  * array-based
  * Queue(FIFO)
@@ -34,4 +36,4 @@ class Queue {
         return this.size;
     }
 }
-module.exports = Queue;
+exports.Queue = Queue;

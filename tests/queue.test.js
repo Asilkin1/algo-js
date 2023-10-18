@@ -1,4 +1,4 @@
-import {Queue} from '../src/queue'
+const {Queue} = require('../build/queue');
 
 test('create empty queue', () => {
     const queue = new Queue(0);
