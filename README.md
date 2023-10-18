@@ -4,3 +4,21 @@
 
 Algorithms and data structures standard library for JavaScript
 
+👨‍🦲Todo:
+
+|         DataStructure                    |     Status    | 
+|------------------------------------------|---------------|
+|    Stack                                 |        ☑️     |
+|    Queue                                 |        ☑️     |
+|    Priority Queue                        |                |
+|    Heap                                  |                |
+|    Hash Table                            |                |
+|    Union-Find                            |                |           
+|    Linked List                           |        ☑️      |
+|    Binary Search Tree                    |                |
+|    AVL Tree                              |                |
+|    Red-Black Tree                        |                |
+|    Weak AVL Tree                         |                |
+|    Splay Tree                            |                |
+
+
