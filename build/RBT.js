@@ -1,9 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RedBlackTree = exports.RBTNode = exports.Color = void 0;
 // Red Black Tree
 var Color;
 (function (Color) {
     Color[Color["RED"] = 0] = "RED";
     Color[Color["BLACK"] = 1] = "BLACK";
-})(Color || (Color = {}));
+})(Color || (exports.Color = Color = {}));
 class RBTNode {
     constructor(data, color = Color.RED) {
         this.data = data;
@@ -13,6 +16,7 @@ class RBTNode {
         this.parent = null;
     }
 }
+exports.RBTNode = RBTNode;
 class RedBlackTree {
     constructor() {
         this.root = null;
@@ -123,3 +127,4 @@ class RedBlackTree {
         this.root.color = Color.BLACK;
     }
 }
+exports.RedBlackTree = RedBlackTree;
