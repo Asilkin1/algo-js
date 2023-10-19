@@ -4,7 +4,7 @@
  * a bit less overhead than AVL tree
 */
 
-class WeakAVLTreeNode<T> {
+export class WeakAVLTreeNode<T> {
     data: T;
     left: WeakAVLTreeNode<T> | null;
     right: WeakAVLTreeNode<T> | null;
@@ -18,7 +18,7 @@ class WeakAVLTreeNode<T> {
     }
   }
   
-  class WeakAVLTree<T> {
+  export class WeakAVLTree<T> {
     root: WeakAVLTreeNode<T> | null;
   
     constructor() {
