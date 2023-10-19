@@ -4,6 +4,7 @@ const {BSTTreeNode, BST} = require('../build/BST')
 let btree;
 
 beforeAll(() => {
+    // create empty tree
     btree = new BST();
 });
 

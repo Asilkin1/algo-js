@@ -16,10 +16,10 @@ Algorithms and data structures standard library for JavaScript
 |    Union-Find                            |                |           
 |    Linked List                           |        ☑️      |
 |    Binary Search Tree                    |        ☑️       |
-|    AVL Tree                              |                |
+|    AVL Tree                              |        ☑️        |
 |    Augmented BST                         |        ☑️      |
 |    Red-Black Tree                        |                |
 |    Weak AVL Tree                         |                |
-|    Splay Tree                            |                |
+|    Splay Tree                            |        ☑️        |
 
 

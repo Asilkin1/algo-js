@@ -19,7 +19,7 @@ export class BST<T>{
 
     insert(data:T){
         const node = new BSTTreeNode(data);
-
+ 
         if(!this.root){
             this.root = node;
             return this;
