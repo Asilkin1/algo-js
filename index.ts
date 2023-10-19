@@ -1,13 +1,14 @@
-// from src
-import {ABST, ABSTTreeNode} from './src/tree/ABST'
-import {BST, BSTTreeNode} from './src/tree/BST'
-import {AVLTree, AVLTreeNode} from './src/tree/AVLtree'
-import {SplayTree, SplayTreeNode} from './src/tree/SplayTree'
-import {Node,LinkedList} from './src/linkedlist'
-import {Queue} from './src/queue'
-import {Stack} from './src/stack'
-import {RedBlackTree, RBTNode} from './src/tree/RBT'
-import {WeakAVLTreeNode,WeakAVLTree} from './src/tree/WeakAVLTree'
+// from build folder
+import {ABST, ABSTTreeNode} from './build/tree/ABST'
+import {BST, BSTTreeNode} from './build/tree/BST'
+import {AVLTree, AVLTreeNode} from './build/tree/AVLtree'
+import {SplayTree, SplayTreeNode} from './build/tree/SplayTree'
+import {Node,LinkedList} from './build/linkedlist'
+import {Queue} from './build/queue/queue'
+import {Stack} from './build/stack'
+import {RedBlackTree, RBTNode} from './build/tree/RBT'
+import {WeakAVLTreeNode,WeakAVLTree} from './build/tree/WeakAVLTree'
+import {PriorityQueue} from './build/queue/priorityQueue'
 
 // external exports from the package
 module.exports = {
@@ -26,5 +27,6 @@ module.exports = {
     WeakAVLTreeNode,
     SplayTreeNode,
     Queue,
-    Stack
+    Stack,
+    PriorityQueue
 }

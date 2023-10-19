@@ -5,20 +5,20 @@ Algorithms and data structures standard library for JavaScript
 
 👨‍🦲Todo:
 
-|         DataStructure                    |     Status     | 
-|------------------------------------------|------------    |
-|    Stack                                 |        ☑️     |
-|    Queue                                 |        ☑️     |
-|    Priority Queue                        |                |
-|    Heap                                  |                |
-|    Hash Table                            |                |
-|    Union-Find                            |                |           
-|    Linked List                           |        ☑️      |
-|    Binary Search Tree                    |        ☑️       |
+|         DataStructure                    |     Status       | 
+|------------------------------------------|------------------|
+|    Stack                                 |        ☑️        |
+|    Queue                                 |        ☑️        |
+|    Priority Queue                        |        ☑️        |
+|    Heap                                  |        ☑️          |
+|    Hash Table                            |                  |
+|    Union-Find                            |                  |           
+|    Linked List                           |        ☑️        |
+|    Binary Search Tree                    |        ☑️        |
 |    AVL Tree                              |        ☑️        |
-|    Augmented BST                         |        ☑️      |
+|    Augmented BST                         |        ☑️        |
 |    Red-Black Tree                        |        ☑️        |
-|    Weak AVL Tree                         |        ☑️          |
+|    Weak AVL Tree                         |        ☑️        |
 |    Splay Tree                            |        ☑️        |
 
 
