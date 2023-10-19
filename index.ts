@@ -6,6 +6,7 @@ import {SplayTree, SplayTreeNode} from './src/SplayTree'
 import {Node,LinkedList} from './src/linkedlist'
 import {Queue} from './src/queue'
 import {Stack} from './src/stack'
+import {RedBlackTree, RBTNode} from './src/RBT'
 
 // external exports from the package
 module.exports = {
@@ -18,6 +19,8 @@ module.exports = {
     Node,
     LinkedList,
     SplayTree,
+    RedBlackTree,
+    RBTNode,
     SplayTreeNode,
     Queue,
     Stack

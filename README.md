@@ -6,8 +6,8 @@ Algorithms and data structures standard library for JavaScript
 
 👨‍🦲Todo:
 
-|         DataStructure                    |     Status    | 
-|------------------------------------------|---------------|
+|         DataStructure                    |     Status     | 
+|------------------------------------------|------------    |
 |    Stack                                 |        ☑️     |
 |    Queue                                 |        ☑️     |
 |    Priority Queue                        |                |
@@ -18,7 +18,7 @@ Algorithms and data structures standard library for JavaScript
 |    Binary Search Tree                    |        ☑️       |
 |    AVL Tree                              |        ☑️        |
 |    Augmented BST                         |        ☑️      |
-|    Red-Black Tree                        |                |
+|    Red-Black Tree                        |        ☑️        |
 |    Weak AVL Tree                         |                |
 |    Splay Tree                            |        ☑️        |
 
