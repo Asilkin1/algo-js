@@ -21,4 +21,10 @@ Algorithms and data structures standard library for JavaScript
 |    Weak AVL Tree                         |        ☑️        |
 |    Splay Tree                            |        ☑️        |
 
+|   Algorithms                             |        Status      |
+|------------------------------------------|--------------------|
+|   Merge sort                             |        ☑️          |
+|   Quick sort                             |        ☑️          |
+|   Bubble sort                            |        ☑️          |
+
 
