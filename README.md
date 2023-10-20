@@ -1,5 +1,4 @@
-
-![AlgoV0 1](https://github.com/Asilkin1/algo-js/assets/11600357/e72fefea-8f3b-4652-84a0-97039c4c12f0)
+<img src="https://github.com/Asilkin1/algo-js/assets/11600357/e72fefea-8f3b-4652-84a0-97039c4c12f0" width="30%">
 
 Algorithms and data structures standard library for JavaScript
 
