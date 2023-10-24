@@ -10,6 +10,10 @@ export class WeakAVLTreeNode<T> {
   right: WeakAVLTreeNode<T> | null;
   weight: number;
 
+  /**
+     * Create a new WeakAVLTreeNode instance.
+     * @param {T} data - Data to be inserted into the Node.
+    */
   constructor(data: T) {
     this.data = data;
     this.left = null;
@@ -20,22 +24,35 @@ export class WeakAVLTreeNode<T> {
 
 export class WeakAVLTree<T> {
   root: WeakAVLTreeNode<T> | null;
-
+  /**
+     * Create a new WeakAVLree instance.
+    */
   constructor() {
     this.root = null;
   }
 
-  // Get the weight of a node (handles null nodes)
+  /**
+     * Get the weight of the node
+     * @param { WeakAVLTreeNode | null } node - a node to check.
+     * @returns { number } - weight of the node.
+    */
   private getWeight(node: WeakAVLTreeNode<T> | null): number {
     return node ? node.weight : 0;
   }
 
-  // Update the weight of a node
+  /**
+     * Update weight.
+     * @param {WeakAVLTreeNode<T>} node - tree node.
+    */
   private updateWeight(node: WeakAVLTreeNode<T>) {
     node.weight = this.getWeight(node.left) + this.getWeight(node.right) + 1;
   }
 
-  // Rotate left
+  /**
+     * Left rotation.
+     * @param {WeakAVLTreeNode<T>} node - tree node.
+     * @returns {WeakAVLTreeNode<T>} - tree node.
+    */
   private leftRotate(node: WeakAVLTreeNode<T>): WeakAVLTreeNode<T> {
     const newRoot = node.right;
     node.right = newRoot!.left;
@@ -45,7 +62,11 @@ export class WeakAVLTree<T> {
     return newRoot;
   }
 
-  // Rotate right
+  /**
+     * Right rotation.
+     * @param {WeakAVLTreeNode<T>} node - tree node.
+     * @returns {WeakAVLTreeNode<T>} - tree node.
+    */
   private rightRotate(node: WeakAVLTreeNode<T>): WeakAVLTreeNode<T> {
     const newRoot = node.left;
     node.left = newRoot!.right;
@@ -55,7 +76,11 @@ export class WeakAVLTree<T> {
     return newRoot;
   }
 
-  // Balance the tree
+  /**
+     * Balance the tree.
+     * @param { WeakAVLTreeNode<T> } node - unbalanced tree node.
+     * @returns { WeakAVLTreeNode<T> } - balanced tree node.
+    */
   private balance(node: WeakAVLTreeNode<T>): WeakAVLTreeNode<T> {
     if (!node) return null;
 
@@ -78,15 +103,22 @@ export class WeakAVLTree<T> {
         return this.leftRotate(node);
       }
     }
-
     return node;
   }
 
-  // Insert a value into the tree
+  /**
+     * Insert a value into the tree.
+     * @param {T} data - data to be inserted into the tree.
+    */
   insert(data: T) {
     this.root = this.insertNode(this.root, data);
   }
-
+  /**
+     * Insert node.
+     * @param {WeakAVLTreeNode<T> | null} node - tree node.
+     * @param { T } data - data to be inserted.
+     * @returns {WeakAVLTreeNode<T>} - tree node.
+    */
   private insertNode(node: WeakAVLTreeNode<T> | null, data: T): WeakAVLTreeNode<T> {
     if (!node) {
       return new WeakAVLTreeNode(data);
