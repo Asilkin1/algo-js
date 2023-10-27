@@ -13,6 +13,10 @@ export class SplayTreeNode<T>{
     left:SplayTreeNode<T>;
     right:SplayTreeNode<T>;
 
+     /**
+     * Create a new WeakAVLTreeNode instance.
+     * @param {T} data - Data to be inserted into the Node.
+    */
     constructor(data: T){
         this.data = data;
         this.left = null;
@@ -20,14 +24,19 @@ export class SplayTreeNode<T>{
     }
 }
 
-
 export class SplayTree<T>{
     root: SplayTreeNode<T> | null;
-
+     /**
+     * Create a new SplayTree instance.
+    */
     constructor(){
         this.root = null;
     }
-
+     /**
+     * Performs a left rotation.
+     * @param {SplayTreeNode<T>} node - node to be rotated.
+     * @returns {SplayTreeNode<T>} - new root after rotation.
+    */
     private leftRotate(node: SplayTreeNode<T>): SplayTreeNode<T>{
         const newRoot = node.right;
         node.right = newRoot.left;
@@ -35,6 +44,11 @@ export class SplayTree<T>{
         return newRoot;
     }
 
+    /**
+     * Create a new SplayTree instance.
+     * @param {SplayTreeNode<T>} node - node to be rotated.
+     * @returns {SplayTreeNode<T>} - new root after rotation.
+    */
     private rightRotate(node:SplayTreeNode<T>):SplayTreeNode<T>{
         const newRoot = node.left!;
         node.left = newRoot.right;
@@ -42,6 +56,11 @@ export class SplayTree<T>{
         return newRoot;
     }
 
+    /**
+     * Auto-balancing nodes.
+     * @param {SplayTreeNode<T>} node - node to be balanced.
+     * @returns {SplayTreeNode<T>} - new root after self-balancing.
+    */
     private splay(node:SplayTreeNode<T> | null, data: T): SplayTreeNode<T>{
         if(!node) return null;
 
@@ -71,6 +90,10 @@ export class SplayTree<T>{
         }
     }
 
+    /**
+     * Insert data into a Tree.
+     * @param {T} daat - data to be inserted into the tree.
+    */
     insert(data: T){
         if(!this.root){
             this.root = new SplayTreeNode(data);
@@ -94,11 +117,20 @@ export class SplayTree<T>{
         }
     }
 
+    /**
+     * Search for data in the Tree.
+     * @param {T} data - data to be found.
+     * @returns {boolean} - true if data exists and false otherwise.
+    */
     search(data: T):boolean{
         this.root = this.splay(this.root, data);
         return this.root?.data === data;
     }
 
+    /**
+     * Create a new SplayTree instance.
+     * @param {T} data - data to be deleted.
+    */
     delete(data: T){
         if(!this.root) return;
 
