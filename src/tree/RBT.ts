@@ -1,4 +1,8 @@
-// Red Black Tree
+/**
+ * 
+ * Self-adjusting Red-Black Tree
+ * 
+*/
 export enum Color {
     RED,
     BLACK
@@ -11,6 +15,11 @@ export class RBTNode<T>{
     right: RBTNode<T> | null;
     parent: RBTNode<T> | null;
 
+    /**
+     * Create a new RBTNode instance.
+     * @param {T} data - Data to be inserted into the Node.
+     * @param {Color} color - Color of the node.
+    */
     constructor(data: T, color: Color = Color.RED) {
         this.data = data;
         this.color = color;
@@ -23,10 +32,17 @@ export class RBTNode<T>{
 export class RedBlackTree<T>{
     root: RBTNode<T> | null;
 
+    /**
+     * Create a new RedBlackTree instance.
+    */
     constructor() {
         this.root = null;
     }
 
+    /**
+     * Left rotation of the node.
+     * @param {RBTNode<T>} node - a node to be rotated.
+    */
     leftRotate(node: RBTNode<T>) {
         const rightChild = node.right;
         node.right = rightChild!.left;
@@ -48,7 +64,11 @@ export class RedBlackTree<T>{
         node.parent = rightChild;
 
     } // left rotate ends
-
+    
+    /**
+     * Right rotation of the node.
+     * @param {RBTNode<T>} node - a node to be rotated.
+    */
     rightRotate(node: RBTNode<T>) {
         const leftChild = node.left;
         node.left = leftChild!.right;
@@ -71,6 +91,10 @@ export class RedBlackTree<T>{
         node.parent = leftChild;
     } // right rotate ends
 
+    /**
+     * Insert new data into the tree.
+     * @param {T} data - data to be inserted.
+    */
     insert(data: T) {
         const newNode = new RBTNode(data, Color.RED);
         this.root = this.insertNode(this.root, newNode);
@@ -78,6 +102,12 @@ export class RedBlackTree<T>{
         this.fixViolations(newNode);
     }
 
+    /**
+     * Insert a node relative to the root.
+     * @param { RBTNode<T> | null } root - a root node.
+     * @param { RBTNode<T> } node - a node to be inserted.
+     * @returns { RBTNode<T> } - return a root.
+    */
     insertNode(root: RBTNode<T> | null, node: RBTNode<T> | null): RBTNode<T> | null {
         if (root === null) {
             return node;
@@ -93,6 +123,10 @@ export class RedBlackTree<T>{
         return root;
     } // insertNode ends
 
+    /**
+     * Fix nodes structure based on the red-black tree criteria.
+     * @param {RBTNode<T> | null} node - a node to be inserted.
+    */
     fixViolations(node: RBTNode<T> | null) {
         while (node !== this.root && node!.color === Color.RED && node!.parent!.color === Color.RED) {
             let parent = node!.parent;
